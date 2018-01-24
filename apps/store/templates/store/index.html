@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amadon Store</title>
+    <style>
+        body{
+            width:970px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table, th, td{
+            border: solid 1px black;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Amadon Store!</h1>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>Dojo Shirt</td>
+            <td>$19.99</td>
+            <td><form method="post" action="/store/buy/">{% csrf_token %}
+                <input type="hidden" name="id" value="0"><select name="amount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select> <input type="submit" value="Buy">
+            </form></td>
+        </tr>
+        <tr>
+            <td>Dojo Sweater</td>
+            <td>$29.99</td>
+            <td><form method="post" action="/store/buy/">{% csrf_token %}
+                <input type="hidden" name="id" value="1"><select name="amount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select> <input type="submit" value="Buy">
+            </form></td>
+        </tr>
+        <tr>
+            <td>Dojo Cup</td>
+            <td>$4.99</td>
+            <td><form method="post" action="/store/buy/">{% csrf_token %}
+                <input type="hidden" name="id" value="2"><select name="amount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select> <input type="submit" value="Buy">
+            </form></td>
+        </tr>
+        <tr>
+            <td>Algorithm Book</td>
+            <td>$49.99</td>
+            <td><form method="post" action="/store/buy/">{% csrf_token %}
+                <input type="hidden" name="id" value="3"><select name="amount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select> <input type="submit" value="Buy">
+            </form></td>
+        </tr>
+    </table>
+</body>
+</html>
